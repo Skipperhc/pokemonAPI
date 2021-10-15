@@ -2,11 +2,9 @@ const express = require('express')
 
 var pokemonRouter = express.Router()
 
-pokemonRouter.get('/', (req, res) => {
-    res.send('deu certo')
-})
-pokemonRouter.get('/:id')
-pokemonRouter.post('/')
-pokemonRouter.put('/:id')
+pokemonRouter.get('/', (_, res) => res.send('retorno padrão'))
+pokemonRouter.get('/:id', (_, res) => res.send('retorno padrão'))
+pokemonRouter.post('/', (_, res) => res.send('retorno padrão'))
+pokemonRouter.put('/:id', (_, res) => res.send('retorno padrão'))
 
 module.exports = pokemonRouter;
